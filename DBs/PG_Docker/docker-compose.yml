@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: bdi_class_0
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Password123
+    volumes:
+      - bdi_pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  bdi_pg_data:
+
