@@ -1,10 +1,10 @@
 version: '3.8'
 services:
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2022-latest 
+    image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: sqlserver_container
     environment:
-      - SA_PASSWORD=Password123$
+      - SA_PASSWORD=Password123$ # User: "SA"
       - ACCEPT_EULA=Y
     volumes:
       - sql_data:/var/opt/mssql
