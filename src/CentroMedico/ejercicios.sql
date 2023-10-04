@@ -11,16 +11,15 @@ select *
 
 
 -- 2. Mostrar todos los médicos que no generaron ningún estudio
--- TODO: fix
 
-select *
-    from EspecialidadMedico
-    inner join Medicos
-    on EspecialidadMedico.id_medico = Medicos.id_medico
-    inner join Especialidad
-    on EspecialidadMedico.id_especialidad = Especialidad.id_especialidad
-    where EspecialidadMedico.id_especialidad_medico not in
-    (select id_especialidad_medico from Historial);
+select med.id_medico, med.nombre
+	from Medicos med
+	where med.id_medico not in (
+		select distinct espemed.id_medico
+			from Historial his
+			left join EspecialidadMedico espemed on espemed.id_especialidad_medico = his.id_especialiad_medico
+	)
+	group by med.id_medico, med.nombre;
 
 
 
