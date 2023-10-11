@@ -1,3 +1,5 @@
+-- Source: https://www.discoduroderoer.es/ejercicios-propuestos-y-resueltos-sakila-mysql/
+
 -- 1. Actores que tienen de primer nombre ‘Scarlett’.
 select * from actor where first_name = 'Scarlett';
 
