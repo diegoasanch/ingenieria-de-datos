@@ -124,7 +124,7 @@ select
     ad.address,
     ad.address2
 from staff
-left join address ad on ad.address_id = staff.address_id
+left join 'address' ad on ad.address_id = staff.address_id
 left join city ci on ci.city_id = ad.city_id
 left join country co on co.country_id = ci.country_id;
 
