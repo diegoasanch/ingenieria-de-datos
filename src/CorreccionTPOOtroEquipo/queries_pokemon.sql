@@ -1,3 +1,9 @@
+-- TPO Sentencias SQL (19)
+--
+-- Nota: para la resolucion de ciertos ejercicios fue necesario modificar la estructura de la DB
+--       para agregar nuevas tablas y/o columnas. Estas modificaciones se encuentran documentadas
+--       en cada ejercicio. Se adjunta el DER actualizado en el archivo DER.png
+
 -- 1. Listar las 10 habilidades que mas participaron en competencias del Entrenador XXX
 DECLARE @EntrenadorID int = 1;
 SELECT TOP 10 h.nombre, COUNT(*) AS numero_de_participaciones
