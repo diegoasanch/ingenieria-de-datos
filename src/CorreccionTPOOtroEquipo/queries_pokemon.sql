@@ -1,4 +1,4 @@
--- TPO Sentencias SQL (19)
+-- TPO Sentencias SQL - Equipo 19
 --
 -- Nota: para la resolucion de ciertos ejercicios fue necesario modificar la estructura de la DB
 --       para agregar nuevas tablas y/o columnas. Estas modificaciones se encuentran documentadas
